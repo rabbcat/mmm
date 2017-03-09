@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引用第三方样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引用公共样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引用页面css样式 -->
+    <link rel="stylesheet/less" href="css/coupon-common.less">
+    <!-- 引用less.js -->
+    <script src="./lib/less/less.min.js"></script>
+    <title>商城导航 -- 慢慢买</title>
+    <style>
+        /* 设置主体商品展示样式 */
+        .linksName a {
+            padding: 10px 8px;
+            margin: 5px;
+            border: 1px solid #bfbfbf;
+            background-color: #f4f4f4;
+        }
+
+        .linksName a img {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 头部信息 -->
+<header>
+    <h1>商城导航</h1>
+    <a class="app fr" href="javascript:"></a>
+    <a class="goindex fl" href="javascript:"></a>
+</header>
+<main>
+    <div class="linksName clearfix">
+    </div>
+    <div class="nav">
+        <a href="javascript:" class="goindex">首页</a><span>&nbsp;&gt;&nbsp;</span><a href="#">商城导航</a>
+        <a href="http://m.manmanbuy.com/?o=download" class="APPdown">
+            <img src="images/APPDownload.png" alt="">
+        </a>
+    </div>
+</main>
+<footer>
+    <ul class="table">
+        <li><a href="http://192.168.21.72/wxy1/login.html">登录</a></li>
+        <li><a href="http://192.168.21.72/wxy1/register.html">注册</a></li>
+        <li class="gotop"><a href="javascript:"><img src="images/top-yy.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="links">
+        <p><a href="http://m.manmanbuy.com/?o=download">手机app下载</a><a href="javascript:">慢慢买手机版</a><span>--</span>&nbsp;<span>掌上比价平台</span>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script type="text/template" id="linksName">
+
+    {{each result as value i}}
+    <a class="fl" href="{{ result[i].navHref }}"><img src="{{ result[i].navImg }}" alt="">{{ result[i].navTitle }}</a>
+    {{/each}}
+</script>
+
+<!-- 引入jQuery -->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<!-- 引入Bootstrap -->
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<!-- 引入template -->
+<script src="./lib/template/template.js"></script>
+<!-- 引入页面js -->
+<script src="js/sitenav.js"></script>
+</body>
+
+</html>

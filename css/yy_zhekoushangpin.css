@@ -1,0 +1,340 @@
+/*��������岼����ʽ B*/
+
+/*��������岼����ʽ E*/
+/*ͷ�� B*/
+.head {
+    width: 100%;
+    height: 50px;
+    background-color: #ff841d;
+    position: relative;
+}
+.head > .h-back {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+}
+.head > .h-back > a {
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+}
+.head > h3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font: normal 900 20px/50px "microsoft yahei";
+}
+.head > .appDown {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+.head > .appDown > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/header_app.png) no-repeat center;
+    background-size: 34px;
+}
+/*ͷ�� E*/
+/*���岿�� B*/
+.main {
+    min-height: 600px;
+    padding: 0 15px;
+    position: relative;
+}
+.main > .introduce {
+    min-height: 500px;
+}
+.main > .introduce > h3 {
+    overflow: hidden;
+    margin: 10px 0;
+    font: 900 18px "microsoft yahei";
+    color: #666;
+}
+.main > .introduce > .price {
+    color: #ff841d;
+    font: 700 14px "microsoft yahei";
+}
+.main > .introduce > .info {
+    margin: 20px 0 10px 0;
+    color: #999;
+    font: 12px "microsoft yahei";
+}
+.main > .introduce > .y-talk {
+    color: #4682c5;
+    font: 12px "microsoft yahei";
+    margin-bottom: 5px;
+}
+.main > .introduce > .detailed > .smallImg {
+    /*��ͼƬ����һ��overflowhidden�ǽ�ͼƬ���һ������Ŀ� ���־ͻỷ��ͼƬ�ڷ�*/
+}
+.main > .introduce > .detailed > .smallImg > p {
+    color: #606060;
+    line-height: 24px;
+    margin: 20px auto;
+    font: 18px "microsoft yahei";
+}
+.main > .introduce > .detailed > .smallImg > img {
+    width: 120px;
+    height: 120px;
+    float: right;
+    overflow: hidden;
+}
+.main > .introduce > .detailed > .bigImg {
+    width: 100%;
+}
+.main > .introduce > .detailed > .bigImg > img {
+    margin: 25px 0;
+    max-width: 100%;
+}
+.main > .somewhere {
+    margin: 0 80px;
+    padding: 0 0px 0px 10px;
+    background-color: #fff;
+    width: 150px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+    border-color: #f1f1f1 #f1f1f1 #dbdbdb #f1f1f1;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    /*position: absolute;*/
+    left:-6px;
+    display: inline-block;
+    line-height: 38px;
+    z-index:988;
+}
+.main > .somewhere > #disstorck {
+    padding:0 20px 10px 16px
+}
+.main > .somewhere li {
+    font-size: 12px;
+    line-height: 20px;
+}
+.main > .somewhere li span{
+    border-bottom: 1px dotted #c0c0c0;
+    display: block;
+    padding: 0 10px;
+    text-align: left;
+}
+.main > .somewhere li span strong{
+    float: right;
+    color:#f27b04;
+}
+.main > .fixed-content {
+    margin: 20px 0px;
+}
+.main > .fixed-content > .buy {
+    display: block;
+    text-align: center;
+    height: 40px;
+    background-color: #FF9000;
+    color: #fff;
+    margin: 30px 10px;
+    font: 14px/40px "microsoft yahei";
+    border-radius: 5px;
+}
+.main > .fixed-content > div {
+    width: 100%;
+}
+.main > .fixed-content > div > a {
+    display: block;
+    width: 100%;
+}
+.main > .fixed-content > div > a >img {
+    width: 100%;
+}
+.cu-content-pl .tit {
+    font-size: 16px;
+    padding: 6px 8px;
+}
+.cu-content-pl .reply {
+    padding: 6px 8px;
+}
+.cu-content-pl .reply .form {
+    border: 2px solid #ECEAE8;
+    border-radius: 2px;
+    padding: 4px 0 0 4px;
+    background-color: #fff;
+    position: relative;
+    width: 98%;
+    margin: 0px auto;
+}
+.cu-content-pl .reply .form textarea{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: none;
+    line-height: 22px;
+    font-size: 14px;
+    outline: 0;
+    color: #666;
+    height: 68px;
+}
+input {
+    vertical-align: middle;
+}
+.cu-content-pl .reply .form .ctrl {
+    background-color:#fbfbfb ;
+    height: 36px;
+    margin-left: -4px;
+    border-top:1px solid #f2f2f2;
+
+}
+.cu-content-pl .reply .form .ctrl input{
+    position: absolute;
+    right: -2px;
+    bottom:-2px;
+    background: #ff841d;
+    border: 2px solid #ff841d;
+    width: 100px;
+    height: 39px;
+    color: #fff;
+    outline: 0;
+    border-radius: 0 0 2px 0;
+    font-size: 16px;
+}
+.cu-content-pl .list ul li{
+    padding: 18px 10px;
+    background-color: #fff;
+}
+.cu-content-pl .list .userimg {
+    width: 40px;
+    float: left;
+    overflow: hidden;
+}
+.cu-content-pl .list .userimg img {
+    width: 40px;
+    background-position: top;
+    border-radius: 20px;
+    height: 40px;
+}
+.cu-content-pl .list .con{
+    overflow: hidden;
+    padding-left: 10px;
+}
+.cu-content-pl .list .con{
+    margin-bottom: 6px;
+    color: #2e8b01;
+    font-size: 14px;
+}
+.cu-content-pl .list .con .name {
+    margin-bottom: 6px;
+}
+.cu-content-pl .list .con .name .username{
+    color: #5997c0;
+    font-size: 13px !important;
+    float: left;
+}
+.cu-content-pl .list .con .name .time{
+    color: #999999;
+    font-size: 13px !important;
+    float: right;
+}
+.cu-content-pl .list .con .content{
+    font-size: 15px !important;
+    color: #606060;
+    line-height: 20px;
+}
+
+.main > .criticism {
+    padding: 10px 0;
+}
+.main > .criticism > .tit {
+    margin: 10px 0px;
+    font: 16px "microsoft yahei";
+}
+.main > .criticism > .reply > .form {
+    width: 100%;
+    border: 2px solid #ECEAE8;
+}
+.main > .criticism > .reply > .form > textarea {
+    width: 100%;
+    height: 70px;
+    resize: none;
+    outline: none;
+    border: none;
+}
+.main > .criticism > .reply > .form > .ctrl {
+    border-top: 1px solid #f2f2f2;
+}
+.main > .criticism > .reply > .form > .ctrl:after {
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    overflow: hidden;
+}
+.main > .criticism > .reply > .form > .ctrl > .tjdp {
+    width: 100px;
+    height: 36px;
+    border: none;
+    float: right;
+    background-color: #ff841d;
+    border-radius: 2px;
+    color: #fff;
+}
+/*���岿�� E*/
+/*�ײ����� B*/
+.foot {
+    width: 100%;
+    /* �ײ�������ť�Ĳ���*/
+}
+.foot > .button {
+    width: 100%;
+}
+.foot > .button > a {
+    float: left;
+    height: 30px;
+    text-align: center;
+    font: normal 14px/30px "microsoft yahei";
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    color: #666;
+    /*��ȡ����һ��a��ǩ*/
+    /*��ȡ���ڶ���a��ǩ*/
+    /*��ȡ��������a��ǩ*/
+}
+.foot > .button > a:nth-child(1) {
+    width: 30%;
+}
+.foot > .button > a:nth-child(2) {
+    width: 30%;
+}
+.foot > .button > a:nth-child(3) {
+    width: 40%;
+}
+.foot > .f-info {
+    text-align: center;
+}
+.foot > .f-info > p {
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.foot > .f-info > p > a {
+    color: red;
+    font-weight: 400;
+}
+.foot > .f-info > p > span {
+    color: #666;
+    font-weight: 400;
+}
+.foot > .f-info > a {
+    font-size: 12px;
+    color: #666;
+}
+/*�ײ����� E*/
+/*# sourceMappingURL=ach_zhekoushangpin.css */

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引用第三方样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引用公共样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引用页面css样式 -->
+    <link rel="stylesheet/less" href="css/gspproduct_couyixia.less">
+    <!-- 引用less.js -->
+    <script src="./lib/less/less.min.js"></script>
+    <title>凑单品--凑一下</title>
+</head>
+<body>
+<!-- 头部信息 -->
+<header>
+    <h1>凑单品</h1>
+    <a href="javascript:" class="left" id="openindex"></a>
+    <a href="javascript:" class="right"></a>
+</header>
+<div class="couyixia">
+    <div class="freight-tit tit">
+        距离免运费还差多少元
+    </div>
+    <div class="freight-con con clearfix">
+        <div class="freight-val val fl">
+            <i></i>
+            输入差额
+        </div>
+        <div class="input fr">
+            <input type="number" value="1" placeholder="请输入金额">
+            <i class="numclose"></i>
+        </div>
+    </div>
+    <div class="list-tit tit">
+        商城和地区选择
+    </div>
+    <div class="list-con">
+        <div class="list-shop con clearfix">
+            <div class="val fl">
+                <i></i>
+                商城选择
+            </div>
+            <div class="select fr">
+                <select class="shopName">
+                </select>
+                <i></i>
+            </div>
+        </div>
+        <div class="list-area con clearfix">
+            <div class="val fl">
+                <i></i>
+                选择配送地区
+            </div>
+            <div class="select fr">
+                <select class="areaName">
+                </select>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <div class="sublime"><a href="javascript:">凑一下</a></div>
+</div>
+
+
+<!-- 导航栏下拉菜单模板 -->
+<script type="text/template" id="shopName">
+        <% for(var i = 0; i < result.length; i++){ %>
+        <option value="<%= sum(i) %>"><%= result[i].shopName %></option>
+        <% } %>
+</script>
+<script type="text/template" id="areaName">
+        <% for(var i = 0; i < result.length; i++){ %>
+        <option value="<%= sum(i) %>"><%= name(result[i].areaName) %></option>
+        <% } %>
+</script>
+
+<!-- 引入jQuery -->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<!-- 引入Bootstrap -->
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<!-- 引入template -->
+<script src="./lib/template/template-native.js"></script>
+<!-- 引入页面js -->
+<script src="js/gspproduct_couyixia.js"></script>
+</body>
+</html>

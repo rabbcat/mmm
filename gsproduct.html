@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引用第三方样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引用公共样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引用页面css样式 -->
+    <link rel="stylesheet/less" href="css/gspproduct.less">
+    <!-- 引用less.js -->
+    <script src="./lib/less/less.min.js"></script>
+    <title>凑单品--慢慢买比价网</title>
+</head>
+<body>
+<!-- 头部信息 -->
+<header>
+    <h1>凑单品</h1>
+    <a href="javascript:" class="left" id="opencouyixia"></a>
+    <a href="javascript:" class="right"></a>
+</header>
+<div class="coudan-box">
+    <div class="hd-nav">
+        <ul>
+            <li>
+                <span>京东</span>
+                <i></i>
+                <div class="shop-box shopName"></div>
+            </li>
+            <li>
+                <span>华北</span>
+                <i></i>
+                <div class="shop-box areaName"></div>
+            </li>
+            <li>
+                <span>1元</span>
+                <i></i>
+                <div class="shop-box Amount">
+                    <ul>
+                        <li class="on">
+                            <a href="javascript:"> 全部价格</a>
+                            <i class="selected"></i>
+                        </li>
+                        <li class="on">
+                            <a href="javascript:"> 1-3元</a>
+                            <i></i>
+                        </li>
+                        <li class="on">
+                            <a href="javascript:"> 3-5元</a>
+                            <i></i>
+                        </li>
+                        <li class="on">
+                            <a href="javascript:"> 5-10元</a>
+                            <i></i>
+                        </li>
+                        <li class="on">
+                            <a href="javascript:"> 1-15元</a>
+                            <i></i>
+                        </li>
+                        <li class="on">
+                            <a href="javascript:"> 15元以上</a>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="search">
+            <a href="javascript:"></a>
+        </div>
+        <div class="search-body container">
+            <form class="" action="#">
+                <input type="text" placeholder="搜索你想要的凑单品">
+                <input type="submit" value="搜索">
+            </form>
+            <div class="sort row">
+                <div class="tit col-xs-12">排序</div>
+                <div class="con col-xs-3"><a href="#">销量</a></div>
+                <div class="con col-xs-3"><a href="#" class="on">价格↑</a></div>
+                <div class="con col-xs-3"><a href="#">价格↓</a></div>
+            </div>
+            <div class="classify row">
+                <div class="tit col-xs-12">分类</div>
+                <div class="con col-xs-3"><a href="#" class="on">全部</a></div>
+                <div class="con col-xs-3"><a href="#">家居</a></div>
+                <div class="con col-xs-3"><a href="#">数码</a></div>
+                <div class="con col-xs-3"><a href="#">办公</a></div>
+                <div class="con col-xs-3"><a href="#">个护</a></div>
+                <div class="con col-xs-3"><a href="#">食品</a></div>
+                <div class="con col-xs-3"><a href="#">母婴</a></div>
+                <div class="con col-xs-3"><a href="#">服饰</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="goods">
+    <div class="goods-box">
+    </div>
+</div>
+
+<!-- 导航栏下拉菜单模板 -->
+<script type="text/template" id="shop">
+    <ul>
+        <% for(var i = 0; i < result.length; i++){ %>
+        <li data-shopid="<%= result[i].shopId %>">
+            <a href="javascript:">
+                <%= result[i].shopName %>
+            </a>
+            <% if(i === 0){ %>
+            <i class="selected"></i>
+            <% }else{ %>
+            <i></i>
+            <% } %>
+        </li>
+        <% } %>
+    </ul>
+</script>
+<script type="text/template" id="shoparea">
+    <ul>
+        <% for(var i = 0; i < result.length; i++){ %>
+        <li data-areaId="<%= result[i].areaId %>">
+            <a href="javascript:">
+                <%= result[i].areaName %>
+            </a>
+            <% if(i === 0){ %>
+            <i class="selected"></i>
+            <% }else{ %>
+            <i></i>
+            <% } %>
+        </li>
+        <% } %>
+    </ul>
+</script>
+<!-- 商品详情代码模板 -->
+<script type="text/template" id="doodsBody">
+    <% for(var i = 0; i < result.length; i++){ %>
+    <div class="goods-body fl">
+        <a href="javascript:">
+            <img class="productImg"
+                 src="<%= result[i].productImg %>" alt="">
+            <p class="productName"><%= result[i].productName %></p>
+            <div class="productPrice">
+                <p class="fl"><i>&yen;</i><%= GetYen(result[i].productPrice) %></p>
+                <span class="fr" href="javascript:">去凑单</span>
+            </div>
+        </a>
+    </div>
+    <% } %>
+</script>
+
+
+<!-- 引入jQuery -->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<!-- 引入Bootstrap -->
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<!-- 引入template -->
+<script src="./lib/template/template-native.js"></script>
+<!-- 引入页面js -->
+<script src="js/gspproduct.js"></script>
+</body>
+</html>

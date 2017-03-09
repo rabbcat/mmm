@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet/less" href="css/zel_baicai.less"/>
+    <script src="lib/less/less.min.js"></script>
+</head>
+<body>
+<!--最外层盒子-->
+<div class="layout">
+    <!--白菜价的头部-->
+    <div class="myhead clearfix" id="jump">
+        <a href="index.html" class="backarrow glyphicon glyphicon-menu-left"></a>
+        <h1 class="cabtit"  >白菜价-淘宝内部券</h1>
+        <a href="javascript:;" class="appdownload"><img src="images/header_app.png" alt=""/></a>
+    </div>
+    <div class="con clearfix">
+        <!--白菜价的导航-->
+        <div class="mynav clearfix">
+            <div class="parent clearfix">
+                <ul id="togglel" class="clearfix">
+                </ul>
+            </div>
+            <a href="javascript:;" id="closec" class="clearfix">
+                <img src="images/sear.png" alt=""/>
+                <img src="images/close.png" alt=""/>
+            </a>
+        </div>
+        <!-- 搜索区域-->
+        <div class="check clearfix">
+            <b></b>
+            <input type="text" placeholder="搜索商品即可查内部券"/>
+            <p>搜索</p>
+        </div>
+        <div class="pro clearfix"><img src="images/quan_banner_wap.png" alt=""/></div>
+        <!--白菜价的内容部分-->
+        <div class="part clearfix">
+            <ul class="clearfix">
+            </ul>
+        </div>
+    </div>
+<!--底部部分-->
+    <div class="bottom">
+        <div class="foot">
+            <a href="javascript:;"class="fl">登录</a>
+            <a href="javascript:;" class="fl">注册</a>
+            <a href="#jump" class="fl"><i class="glyphicon glyphicon-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="download">
+            <p class="clearfix phone"><b>手机APP下载</b> 慢慢买手机版 <i>--掌上比价平台</i></p>
+            <a href="">m.manmanbuy.com</a>
+        </div>
+    </div>
+    <!-- app-->
+    <div class="app"></div>
+</div>
+</body>
+<!--导航的动态获取数据-->
+<script type="text/html" id="tpl">
+    {{each result as value i}}
+        <li pronav="{{= value.titleId}}">{{value.title}}</li>
+    {{/each}}
+</script>
+<!--商品内容部分动态获取数据-->
+<script type="text/html" id="goods">
+    {{ each result as value i}}
+    <li>
+        {{# value.productImg}}
+       <p class="proname">{{# value.productName}}</p>
+       <p class="price">{{# value.productPrice}}</p>
+        {{# value.productCouponRemain}}
+        {{# value.productCoupon}}
+        {{# value.productHref}}
+    </li>
+    {{ /each}}
+</script>
+<script src="lib/jquery/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/zel_baicai.js"></script>
+</html>

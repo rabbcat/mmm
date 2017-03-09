@@ -1,0 +1,230 @@
+/*最外层整体布局样式 B*/
+.layout{
+  min-width: 320px;
+  background-color: #fff;
+  >.icon-fix{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 60px;
+    height: 67px;
+    >img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+/*最外层整体布局样式 E*/
+/*固定qpp定位部分 B*/
+
+/*固定qpp定位部分 E*/
+
+/*头部 B*/
+.head{
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+  position: relative;
+  >.h-back{
+    width: 50px;
+    height: 100%;
+    //background-color: red;
+    position: absolute;
+    z-index: 100;
+    >a{
+      position: absolute;
+      top: 0;
+      padding: 15px;
+      width: 100%;
+      height: 100%;
+      //background-color: blue;
+      color: #fff;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+  >h3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font: normal 900 20px/50px "microsoft yahei";
+  }
+  >.appDown{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    >a{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url(../images/header_app.png) no-repeat center;
+      background-size: 34px;
+    }
+  }
+}
+/*头部 E*/
+
+
+/*主体部分 B*/
+.main{
+  min-height: 600px;
+  padding: 0 15px;
+  >.introduce{
+    min-height: 500px;
+    >h3{
+      //height: 50px;
+      overflow: hidden;
+      margin: 10px 0;
+      font: 900 18px "microsoft yahei";
+      color: #666;
+    }
+    >.price{
+      color: #ff841d;
+      font: 700 14px "microsoft yahei";
+    }
+    >.info{
+      margin: 20px 0;
+      color: #999;
+      font: 12px "microsoft yahei";
+    }
+    >.detailed{
+     >.smallImg{
+       //height: 150px;
+       >p{
+         color: #666;
+         font: 18px "microsoft yahei";
+       }
+       /*给图片设置一个overflowhidden是将图片变成一个隔离的块 文字就会环绕图片摆放*/
+       >img{
+         width: 120px;
+         height: 120px;
+         float: right;
+         overflow: hidden;
+       }
+     }
+      >.bigImg{
+        width: 100%;
+        >img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  >.fixed-content{
+    margin: 20px 0px;
+    >.buy{
+      display: block;
+      text-align: center;
+      height: 40px;
+      background-color: #FF9000;
+      color: #fff;
+      margin: 30px 10px;
+      font: 14px/40px "microsoft yahei";
+      border-radius: 5px;
+    }
+    >div{
+      width: 100%;
+      >img{
+        width: 100%;
+      }
+    }
+  }
+  >.criticism{
+    padding: 10px 0;
+    >.tit{
+      margin: 10px 0px;
+      font: 16px "microsoft yahei";
+    }
+    >.reply{
+      >.form{
+        width: 100%;
+        border: 2px solid #ECEAE8;
+        >textarea{
+          width: 100%;
+          height: 70px;
+          resize: none;
+          outline: none;
+          border: none;
+        }
+        >.ctrl{
+          border-top: 1px solid #f2f2f2;
+          &:after{
+            content: '';
+            display: block;
+            height: 0;
+            line-height: 0;
+            clear: both;
+            overflow: hidden;
+          }
+          >.tjdp{
+            width: 100px;
+            height: 36px;
+            border: none;
+            float: right;
+            background-color: #ff841d;
+            border-radius: 2px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+/*主体部分 E*/
+
+/*底部部分 B*/
+.foot{
+  width: 100%;
+  /* 底部三个按钮的部分*/
+  >.button{
+    width: 100%;
+    >a{
+      float: left;
+      height: 30px;
+      text-align: center;
+      font: normal 14px/30px "microsoft yahei";
+      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      color: #666;
+      /*获取到第一个a标签*/
+      &:nth-child(1){
+        width: 30%;
+      }
+      /*获取到第二个a标签*/
+      &:nth-child(2){
+        width: 30%;
+      }
+      /*获取到第三个a标签*/
+      &:nth-child(3){
+        width: 40%;
+      }
+    }
+  }
+  >.f-info{
+    text-align: center;
+    >p{
+      margin-bottom: 0;
+      margin-top: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      >a{
+        color: red;
+        font-weight: 400;
+      }
+      >span{
+        color: #666;
+        font-weight: 400;
+      }
+    }
+    >a{
+      font-size: 12px;
+      color: #666;
+    }
+  }
+}
+/*底部部分 E*/

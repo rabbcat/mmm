@@ -1,0 +1,210 @@
+body {
+  padding-bottom: 120px;
+  background: #f2f2f2;
+}
+#header {
+  width: 100%;
+  height: 50px;
+  background: #ff841d;
+}
+#header > .logo {
+  padding: 12px;
+  height: 100%;
+  display: inline-block;
+}
+#header > .logo img {
+  height: 25px;
+}
+#header > .app {
+  padding: 7px;
+  display: inline-block;
+}
+#header > .app img {
+  width: 34px;
+}
+#search_box {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  background: #fff;
+}
+#search_box form {
+  padding-right: 70px;
+  position: relative;
+}
+#search_box form > input[type='search'] {
+  width: 100%;
+  height: 30px;
+  padding-left: 5%;
+  background: #f1f1f1;
+  text-indent: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+}
+#search_box form > input[type='submit'] {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ff841d;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+.register {
+  width: 100%;
+  padding: 10px;
+}
+.register form ul {
+  width: 100%;
+}
+.register form ul li {
+  width: 100%;
+  margin: 5px 0;
+}
+.register form ul li input {
+  width: 100%;
+  height: 38px;
+}
+.register form ul li p {
+  display: none;
+  color: #C30;
+}
+.register form ul li:nth-child(4) img {
+  width: 66px;
+  height: 38px;
+}
+.register form ul li:nth-child(4) .code {
+  width: 100px;
+  margin: 0 10px;
+}
+.register form ul li:nth-child(4) .get_code {
+  width: 40%;
+  border-radius: 5px;
+  background: #d4d4d4;
+  border: 1px solid #fff;
+}
+.register form li:nth-child(7) {
+  background: #ff9000;
+}
+.register form li:nth-child(7) input {
+  background: #ff9000;
+  border-radius: 10px;
+  border: 1px solid #ff9000;
+}
+footer {
+  width: 100%;
+  line-height: 35px;
+}
+footer span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+footer img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+footer .foot_bottom {
+  width: 100%;
+  margin-top: 10px;
+}
+footer .foot_bottom .top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+footer .foot_bottom .top a {
+  display: block;
+  flex: 1;
+  line-height: 2.5;
+  text-align: center;
+  font-size: 14px;
+}
+footer .foot_bottom .top a:nth-child(2) {
+  border-left: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+}
+footer .foot_bottom .top a:nth-child(3) {
+  position: relative;
+}
+footer .foot_bottom .top a:nth-child(3) img {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 7px;
+}
+footer .foot_bottom .end {
+  width: 100%;
+  padding: 20px 10px;
+  line-height: 1;
+}
+footer .foot_bottom .end p {
+  text-align: center;
+  font-size: 12px;
+}
+footer .foot_bottom .end p a:nth-child(1) {
+  color: red;
+}
+#app_promotion {
+  color: #888;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  background: #faf8f5;
+  padding: 0;
+}
+#app_promotion img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 46px;
+}
+#app_promotion a {
+  display: block;
+}
+#app_promotion a:first-child {
+  width: 21px;
+  height: 21px;
+  background: url("../images/promote_button.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  left: 13px;
+  top: 20px;
+}
+#app_promotion a:nth-child(5) {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  width: 74px;
+  height: 33px;
+  font-size: 13px;
+  line-height: 2.5;
+  text-align: center;
+  color: #fff;
+  background-color: #ff7700;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px #ff5500;
+}
+#app_promotion p:nth-child(3) {
+  margin: 10px auto 0px 112px;
+  font-size: 18px;
+}
+#app_promotion p:nth-child(4) {
+  margin: 0 auto 0 112px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=register.css */

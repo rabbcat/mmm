@@ -1,0 +1,64 @@
+/* 主体部分 */
+body {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+
+.Prompt {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.Product {
+  border-bottom: 1px solid #ddd;
+  background: url(../images/coupon-right.svg) right center no-repeat;
+  background-size: 20px 20px;
+  a {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    padding-right: 0;
+    display: block;
+    img {
+      width: 100px;
+      height: 80px;
+      padding: 10px;
+      float: left;
+      margin-right: 10px;
+    }
+    .info {
+      padding-right: 30px;
+      overflow: hidden;
+      line-height: 24px;
+      .name {
+        line-height: 20px;
+        color: #333;
+      }
+      .Time {
+        font-size: 12px;
+        color: #EE7700;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.bigImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+  img {
+    width: 200px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -80px 0 0 -100px;
+  }
+}

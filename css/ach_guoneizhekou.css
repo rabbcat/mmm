@@ -1,0 +1,165 @@
+/*最外层整体布局样式 B*/
+.layout {
+  min-width: 300px;
+  /*app下载 固定定位*/
+}
+.layout > .icon-fix {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 60px;
+  height: 67px;
+}
+.layout > .icon-fix > img {
+  width: 100%;
+  height: 100%;
+}
+/*最外层整体布局样式 E*/
+/*头部 B*/
+.head {
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+  position: relative;
+}
+.head > .h-back {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+}
+.head > .h-back > a {
+  position: absolute;
+  top: 0;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+.head > h3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font: normal 900 20px/50px "microsoft yahei";
+}
+.head > .appDown {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+.head > .appDown > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/header_app.png) no-repeat center;
+  background-size: 34px;
+}
+/*头部 E*/
+/*主体 B*/
+.main > ul {
+  margin: 0;
+  min-height: 1000px;
+}
+.main > ul > a {
+  float: left;
+  width: 50%;
+}
+.main > ul > a > li {
+  width: 100%;
+  height: 280px;
+  padding: 20px 15px;
+  float: left;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #fff;
+}
+.main > ul > a > li > .productImg {
+  width: 100%;
+  text-align: center;
+}
+.main > ul > a > li > .productImg > img {
+  width: 140px;
+  height: 140px;
+}
+.main > ul > a > li > h5 {
+  color: #333;
+  font: 700 14px "microsoft yahei";
+  margin-top: 15px;
+  height: 36px;
+  overflow: hidden;
+}
+.main > ul > a > li > .pice {
+  color: #ff841d;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  height: 17px;
+  overflow: hidden;
+}
+.main > ul > a > li > .info {
+  color: #ccc;
+  font-size: 12px;
+  margin-bottom: 0;
+  height: 17px;
+  overflow: hidden;
+}
+/*主体 E*/
+/*底部 B*/
+.foot {
+  width: 100%;
+  /* 底部三个按钮的部分*/
+}
+.foot > .button {
+  width: 100%;
+}
+.foot > .button > a {
+  float: left;
+  height: 30px;
+  text-align: center;
+  font: normal 14px/30px "microsoft yahei";
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  color: #666;
+  /*获取到第一个a标签*/
+  /*获取到第二个a标签*/
+  /*获取到第三个a标签*/
+}
+.foot > .button > a:nth-child(1) {
+  width: 30%;
+}
+.foot > .button > a:nth-child(2) {
+  width: 30%;
+}
+.foot > .button > a:nth-child(3) {
+  width: 40%;
+}
+.foot > .f-info {
+  text-align: center;
+}
+.foot > .f-info > p {
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.foot > .f-info > p > a {
+  color: red;
+  font-weight: 400;
+}
+.foot > .f-info > p > span {
+  color: #666;
+  font-weight: 400;
+}
+.foot > .f-info > a {
+  font-size: 12px;
+  color: #666;
+}
+/*底部 E*/
+/*# sourceMappingURL=ach_guoneizhekou.css */

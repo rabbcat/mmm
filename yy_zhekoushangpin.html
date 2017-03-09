@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--添加视口-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>详情</title>
+    <!-- 引入bootstrap的css样式文件-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <!-- 引入base.css样式文件-->
+    <link rel="stylesheet" href="./css/base.css"/>
+    <!-- 引入自己的样式文件-->
+    <link rel="stylesheet/less" href="css/yy_zhekoushangpin.css"/>
+    <!-- 要使用less就要引入less.js文件-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!--整体布局盒子-->
+<div class="layout">
+
+    <!-- 头部部分 B-->
+    <header class="head" id="top">
+        <div class="h-back">
+            <a href="moneyctrl.html" class="glyphicon glyphicon-menu-left" ></a>
+        </div>
+        <h3>国内折扣</h3>
+        <div class="appDown">
+            <a href="http://m.manmanbuy.com/?o=download"></a>
+        </div>
+    </header>
+    <!-- 头部部分 E-->
+
+    <!-- 主体部分 B-->
+    <div class="main">
+        <div class="introduce" id="introduce">
+
+
+        </div>
+        <div class="somewhere clearfix" id="somewhere">
+
+        </div>
+        <div class="fixed-content">
+            <a href="javascript:;" class="buy">前往购买</a>
+            <div>
+                <a href="http://m.manmanbuy.com/?o=download">
+                    <img src="./images/mmbweixin2.png" alt=""/>
+                </a>
+            </div>
+        </div>
+        <div class="criticism" id="criticism">
+
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+<!-- 主体部分 E-->
+
+<!--底部部分 B-->
+<div class="foot">
+    <!-- 底部按钮-->
+    <div class="button clearfix">
+        <a href="http://192.168.21.72/wxy1/login.html">登录</a>
+        <a href="http://192.168.21.72/wxy1/register.html">注册</a>
+        <!-- 利用书签链接原理完成了返回顶部功能-->
+        <a href="javascript:;" class="gotop"><i class="glyphicon glyphicon-arrow-up"></i>返回顶部</a>
+    </div>
+    <div class="f-info">
+        <p><a href="http://m.manmanbuy.com/?o=download">&nbsp;手机app下载</a>慢慢手机版<span>——掌上比价平台</span></p>
+        <a href="http://m.manmanbuy.com/?o=download">http://m.manmanbuy.com</a>
+    </div>
+</div>
+<!--底部部分 E-->
+</div>
+
+</body>
+
+
+<!--详情模板-->
+
+<script type="text/template" id="introduceTpl">
+    <h3><%= result[0].productName %> </h3>
+    <p class="price"><%= result[0].productPinkage %></p>
+    <p class="info"><%= result[0].productFrom %>&nbsp;&nbsp;&nbsp;<%= result[0].productTime %> &nbsp;&nbsp;&nbsp;<%=
+        result[0].productTips %> </p>
+    <!-- 在文本环绕的时候要注意图片要放在前面 文本要设置overflow hidden-->
+    <p class="y-talk"><%= result[0].productComCount %></p>
+
+    <% if(result[0].productImgSm && result[0].productInfo ){ %>
+    <div class="detailed clearfix">
+        <div class="smallImg clearfix">
+            <%=# result[0].productImgSm %>
+            <p><%= result[0].productInfo %></p>
+        </div>
+        <div class="bigImg">
+            <p><%= result[0].productInfo1 %></p>
+            <%=# result[0].productImgLg %>
+        </div>
+    </div>
+
+    <% }else{ %>
+    <div class="detailed clearfix">
+        <div class="smallImg clearfix">
+            <%=# result[0].productImg2 %>
+            <p><%= result[0].productInfo2 %></p>
+        </div>
+        <div class="bigImg">
+            <p><%= result[0].productInfo1 %></p>
+            <%=# result[0].productImg3 %>
+        </div>
+    </div>
+    <% } %>
+
+</script>
+
+<!--有货模板-->
+<script type="text/template" id="somewhereTpl">
+    <%=# result[0].productCity %>
+</script>
+
+
+<!--评论模板-->
+<script type="text/template" id="criticismTpl">
+    <%=# result[0].productComment %>
+</script>
+
+
+<!--引入jquery文件-->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<!--引入bootstrapjs文件-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引入模板引擎文件-->
+<script src="./lib/template/template-native.js"></script>
+<!--引入自己的js文件-->
+<script src="./js/yy_zhekoushangpin.js"></script>
+</html>

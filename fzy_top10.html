@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <!--引入第三方样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入样式重置文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入自己的样式文件 -->
+    <!--<link rel="stylesheet/less" href="css/fzy_pinpai.less">-->
+    <link rel="stylesheet/less" href="css/fzy_top10.less">
+</head>
+
+<body>
+    <div class="layout">
+        <!--头部-->
+        <header id="header" class="">
+            <a href="index.html" class="logo">
+                <img src="images/header_logo.png" alt="">
+            </a>
+            <a href="javascript:;" class="app">
+                <img src="images/header_app.png" alt="" />
+            </a>
+        </header>
+        <!--搜索-->
+        <form action="" class="search">
+                <div class="search_txt">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                </div>
+                <div class="search_btn">
+                    <input type="button" value="搜索">
+                </div>
+        </form>
+        <!--品牌大全-->
+        <section class="pp_title">
+            <a href="index.html">首页</a>&gt;<a href="brandTitle.html">品牌大全</a>
+        </section>
+        <!--品牌列表-->
+        <section class="pp_list">
+        </section>
+        <!--产品列表-->
+        <section class="product" id="aa">
+        </section>
+        <!--最新评论-->
+        <section class="pinglun">
+        </section>
+        <!-- 底部 -->
+        <section class="footer">
+            <div class="footer_top">
+                <a href="#" class="login">登录</a>
+                <a href="#" class="register">注册</a>
+                <a href="#" class="back_top">
+                    <img src="images/fzy_top.jpg" alt="">返回顶部</a>
+            </div>
+            <div class="footer_bottom">
+                <p>
+                    <a href="#">手机app下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    --掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com 
+                </p>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- 引入less js文件 -->
+    <script type="text/javascript" src="lib/less/less.min.js"></script>
+    <!-- 引入jq文件 -->
+    <script type="text/javascript" src="lib/jquery/jquery-1.12.2.min.js"></script>
+    <!-- 引入bootstarp文件 -->
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script type="text/javascript" src="lib/template/template-native.js"></script>
+    <script type="text/javascript" src="lib/template/template.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script type="text/javascript" src="js/fzy_fuc.js"></script>
+    <script type="text/javascript" src="js/fzy_top10.js"></script>
+    <!-- 标题列表模板 -->
+    <script type="text/template" id="pp_top10">
+        <h3></h3>
+            <ul>
+                {{each result as value i}}
+                <li>
+                    <a href="#">
+                        <em>{{i+1}}</em>
+                        <h4>{{result[i].brandName}}</h4>
+                        <p>{{result[i].brandInfo}}</p>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+    </script>
+    <script type="text/html" id="product_tpl">
+        <h3></h3>
+        {{each result as value i}}
+            <div class="product_list" productId={{value.productId}}>
+                <a href="#" class="clearfix">
+                    {{#value.productImg}}
+                    <div class="info_box">
+                        <p>{{value.productName}}</p>
+                        <div class="price">
+                            <em>{{value.productPrice}}</em>
+                        </div>
+                        <div class="other">
+                            <span>{{value.productQuote}}</span>
+                            <span>{{value.productCom}}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    </script>
+    <script type="text/html" id="pl_tpl">
+        <h3>液晶电视最新评论</h3>
+        {{each result as value i}}
+            <div class="pl_box">
+                <div class="pl_tit clearfix">
+                    <a href="#">
+                        <img src="" alt="">
+                        <p>{{value.comName}}</p>
+                    </a>
+                </div>
+                <div class="pl_txt">
+                    <div class="pl_txt_hd">
+                        <span class="user_name">{{value.comName}}:</span>
+                        <em>*****</em>
+                        <span class="date">{{value.comTime}}</span>
+                    </div>
+                    <div class="pl_txt_bd">
+                        <p>{{value.comContent}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+</body>
+</html>

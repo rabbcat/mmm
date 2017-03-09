@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet/less" href="css/login.less"/>
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!-- 头部-->
+<header id="header" class="clearfix">
+    <a href="index.html" class="logo">
+        <img src="./images/header_logo.png" alt=""/>
+    </a>
+    <a href="http://m.manmanbuy.com/?o=download" class="app fr">
+        <img src="./images/header_app.png" alt=""/>
+    </a>
+</header>
+<!--搜索框-->
+<section id="search_box" class="clearfix">
+    <form action="">
+        <input type="search" placeholder="请输入你想比价的商品"/>
+        <input type="submit" value="搜索"/>
+    </form>
+</section>
+<!--表单-->
+<div class="login">
+    <form action="">
+        <ul>
+            <li>
+                <input type="text" placeholder="请输入用户名" class="userName" />
+                <p>用户名不能为空，请输入！</p>
+            </li>
+            <li>
+                <input type="text" class="passWord"/>
+                <p>密码不能为空，请输入！</p>
+            </li>
+            <li>
+                <input type="button" value="登录" id="login_cli"/>
+            </li>
+            <li>
+                <input type="checkbox" checked='checked' id="check"/>一个月内自动登录
+            </li>
+            <li>用户名或密码错误</li>
+            <li>忘记密码：请电脑登录www.manmanbuy.com找回</li>
+        </ul>
+    </form>
+</div>
+<!--底部-->
+<footer id="footer clearfix">
+    <div class="foot_bottom">
+        <div class="top">
+            <a href="http://192.168.21.72/wxy1/login.html">登录</a>
+            <a href="http://192.168.21.72/wxy1/register.html">注册</a>
+            <a href="javascript:void(0)" class="back">
+                返回顶部
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+            </a>
+        </div>
+        <div class="end">
+            <p>
+                <a href="http://m.manmanbuy.com/?o=download">手机APP下载</a>
+                <a href="#">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</footer>
+<div id="app_promotion">
+    <a href="#" class="remove_icon"></a>
+    <img src="images/logo.png" alt=""/>
+    <p>慢慢买</p>
+    <p>全网比价，查历史价格</p>
+    <a href="http://m.manmanbuy.com/?o=download">立即打开</a>
+</div>
+</body>
+
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/template/template.js"></script>
+<script src="js/register.js"></script>
+</html>

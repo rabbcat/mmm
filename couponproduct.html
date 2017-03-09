@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引用第三方样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引用公共样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet/less" href="css/coupon-common.less">
+    <!-- 引用页面css样式 -->
+    <link rel="stylesheet/less" href="css/couponproduct.less">
+    <!-- 引用less.js -->
+    <script src="./lib/less/less.min.js"></script>
+    <title>肯德基等优惠券 -- 慢慢买</title>
+</head>
+
+<body>
+<!-- 头部信息 -->
+<header>
+    <h1>优惠券</h1>
+    <a class="app fr" href="javascript:"></a>
+    <a class="goindex gocoupon fl" href="javascript:"></a>
+</header>
+<main>
+    <div class="Prompt">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+    <div class="bigImg"></div>
+    <ul class="couponProduct"></ul>
+    <div class="nav">
+        <a href="javascript:" class="goindex">首页</a><span>&nbsp;&gt;&nbsp;</span><a href="coupon.html">优惠券</a><span>&nbsp;&gt;&nbsp;</span><a href="#" id="shopname">肯德基优惠券</a>
+        <a href="http://m.manmanbuy.com/?o=download" class="APPdown">
+            <img src="images/APPDownload.png" alt="">
+        </a>
+    </div>
+</main>
+<footer>
+    <ul class="table">
+        <li><a href="http://192.168.21.72/wxy1/login.html">登录</a></li>
+        <li><a href="http://192.168.21.72/wxy1/register.html">注册</a></li>
+        <li class="gotop"><a href="javascript:"><img src="images/top-yy.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="links">
+        <p><a href="http://m.manmanbuy.com/?o=download">手机app下载</a><a href="javascript:">慢慢买手机版</a><span>--</span>&nbsp;<span>掌上比价平台</span>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!-- 动态模板 -->
+<script type="text/template" id="couponProduct">
+    {{ each result as value i }}
+    <li class="Product clearfix">
+        <a href="javascript:"
+           title=" {{ result[i].couponProductName }}">
+            {{# result[i].couponProductImg }}
+            <div class="info">
+                <p class="Name">{{ result[i].couponProductName }}</p>
+                <p class="Price">{{ result[i].couponProductPrice }}</p>
+                <p class="Time">{{ result[i].couponProductTime }}</p>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+<!-- 引入jQuery -->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<!-- 引入Bootstrap -->
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<!-- 引入template -->
+<script src="./lib/template/template.js"></script>
+<!-- 引入页面js -->
+<script src="js/couponproduct.js"></script>
+</body>
+
+</html>

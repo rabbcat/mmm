@@ -1,0 +1,215 @@
+// 声明变量，定义常用函数
+@mainColor: green;
+@titColor: @mainColor;
+.bg(@color:@mainColor){
+  background-color:@color;
+}
+.bd(@color:#000){
+  border:1px solid @color;
+}
+.bl(@color:#000){
+  border-left:1px solid @color;
+}
+.br(@color:#000){
+  border-right:1px solid @color;
+}
+.bt(@color:#000){
+  border-top:1px solid @color;
+}
+.bb(@color:#000){
+  border-bottom:1px solid @color;
+}
+// 页面整体布局容器
+.layout {
+  width: 100%;
+  // min-width: 320px;
+  // max-width: 640px;
+  margin: 0 auto;
+}
+// 头部 start
+#header {
+  padding: 10px;
+  .bg();
+  height:50px;
+  >.logo{
+    height: 30px;
+    img{
+      height: 25px;
+    }
+  }
+  >.app {
+    float: right;
+    img {
+      height: 34px;
+    }
+  }
+}
+// 头部 end
+// 搜索框 start
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-right: 0;
+  font-size: 16px;
+  background: #fff;
+  .search_txt {
+    flex: 1;
+    input {
+      height: 30px;
+      line-height: 30px;
+      width: 100%;
+      padding-left: 15px;
+      border-radius: 15px;
+      color:#999;
+      .bg(#eee);
+    }
+  }
+  .search_btn {
+    margin-left: -30px;
+    margin-right: 10px;
+    width: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    [type=button] {
+      color:#fff;
+      height: 30px;
+      line-height: 30px;
+      width: 100%;
+      .bg();
+    }
+  }
+}
+//搜索框 end
+
+.pp_title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  color: #666;
+  .bt(#ddd);
+  .bb(#ddd);
+  background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top,#ffffff, #ebebeb);
+  a {
+    color: inherit;
+  }
+}
+
+
+
+.product {
+  margin-top: 10px;
+  .product_list {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 0;
+    a {
+      display: block;
+      width: 100%;
+      .bb(#ddd);
+      img {
+        float: left;
+        width: 100px;
+        height: 100px;
+      }
+      .info_box {
+        overflow: hidden;
+        padding-left: 10px;
+        .price {
+          line-height: 30px;
+          font-size: 16px;
+          em {
+            color:#f00;
+          }
+        }
+        .other {
+          color:#999;
+          font-size: 10px;
+          span {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+
+.page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  line-height: 30px;
+  .prev,.next {
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    .bd(#BEBEBE);
+    border-radius: 3px;
+    .bg(#E6E6E6);
+  }
+  select {
+    width: 100px;
+    height: 30px;
+    .bd(#BEBEBE);
+    border-radius: 3px;
+  }
+}
+
+
+// 底部 start
+.footer {
+  width: 100%;
+  margin-top: 10px;
+  .footer_top {
+    display: flex;
+    width: 100%;
+    .bt(#ddd);
+    .bb(#ddd);
+    a {
+      color:#666;
+      text-align: center;
+      flex: 2;
+      height: 34px;
+      line-height: 34px;
+    }
+    .login {
+      .br(#ddd);
+    }
+    .register {
+      .br(#ddd);
+    }
+    .back_top {
+      flex: 3;
+      img {
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+        margin-top: -5px;
+        margin-right: 2px;
+      }
+    }
+  }
+  .footer_bottom {
+    padding: 15px 0;
+    color:#666;
+    font-size: 12px;
+    p {
+      margin: 0;
+      text-align: center;
+      font-size: 12px;
+      a:nth-child(1) {
+        color:#f00;
+      }
+    }
+  }
+}
+// 底部 end

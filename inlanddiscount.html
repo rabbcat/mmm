@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>国内折扣</title>
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <!-- 引入base.css文件 清除默认样式-->
+    <link rel="stylesheet" href="./css/base.css"/>
+    <!-- 引入自己的css样式 如果是less rel属性要写成样式-->
+    <link rel="stylesheet/less" href="./css/ach_guoneizhekou.less"/>
+    <!--因为使用了less 所以要引入/less.min.js这个js文件-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+    <div class="layout">
+
+        <!-- app下载 固定定位 B-->
+        <a href="javascript:;" class="icon-fix">
+            <img src="images/APPDownload.png" alt=""/>
+        </a>
+        <!-- app下载 固定定位 E-->
+
+        <!--头部部分 B-->
+        <header class="head" id="top">
+            <div class="h-back">
+                <a href="./index.html" class="glyphicon glyphicon-menu-left"></a>
+            </div>
+            <h3>国内折扣</h3>
+            <div class="appDown">
+                <a href="javascrip:;"></i></a>
+            </div>
+        </header>
+        <!-- 头部部分 E-->
+
+        <!--主体部分 B-->
+        <div class="main">
+            <ul class="clearfix"id="productBox">
+
+            </ul>
+        </div>
+        <!--主体部分 E-->
+
+        <!--底部部分 B-->
+        <div class="foot">
+            <!-- 底部按钮-->
+           <div class="button clearfix">
+               <a href="javascript:;">登录</a>
+               <a href="javascript:;">注册</a>
+               <!-- 利用书签链接原理完成了返回顶部功能-->
+               <a href="javascript:;" id="backTop"><i class="glyphicon glyphicon-arrow-up"></i>返回顶部</a>
+           </div>
+            <div class="f-info">
+                <p><a href="javascript:;">&nbsp;手机app下载</a>慢慢手机版<span>——掌上比价平台</span> </p>
+                <a href="javascript:;">http://m.manmanbuy.com</a>
+            </div>
+        </div>
+        <!--底部部分 E-->
+    </div>
+</body>
+<!--模板-->
+<script type="text/template" id="productListTpl">
+    <% for(var i = 0;i < result.length;i++){ %>
+          <a href="ach_zhekoushangpin.html?productId=<%= result[i].productId %>" class="clearfix">
+            <li>
+                <div class="productImg">
+                    <%=# result[i].productImg %>
+                </div>
+                <h5><%= result[i].productName %></h5>
+                <p class="pice"><%= result[i].productPrice %></p>
+                <p class="info"><%= result[i].productFrom +" | "+ result[i].productTime %></p>
+            </li>
+        </a>
+    <% } %>
+</script>
+<!--引入jquery文件-->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<!--引入bootstrap的js文件-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引入模板引擎的js文件 该文件的模板是以 <%%> 来书写的-->
+<script src="./lib/template/template-native.js"></script>
+<!--引入自己的js文件-->
+<script src="./js/ach_guoneizhekou.js"></script>
+</html>

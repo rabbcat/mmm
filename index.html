@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>慢慢买————购物比价网</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./lib/wxy/icon_font/font_1/iconfont.css"/>
+    <link rel="stylesheet/less" href="./css/index.less"/>
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!-- 头部-->
+<header id="header" class="clearfix">
+    <a href="index.html" class="logo">
+        <img src="./images/header_logo.png" alt=""/>
+    </a>
+    <a href="http://m.manmanbuy.com/?o=download" class="app fr">
+        <img src="./images/header_app.png" alt=""/>
+    </a>
+</header>
+<!--搜索框-->
+<section id="search_box" class="clearfix">
+    <form action="">
+        <input type="search" placeholder="请输入你想比价的商品"/>
+        <input type="submit" value="搜索"/>
+    </form>
+</section>
+<!--菜单栏-->
+<section id="menu" class="clearfix">
+    <div class="container">
+        <div class="row ">
+
+        </div>
+    </div>
+</section>
+<!--折扣列表-->
+<section id="bargin" class="clearfix">
+    <a href="moneyctrl.html" class="bargin_title">
+        <span>超值折扣推荐</span>
+        <img src="images/more.png" alt="" class="fr"/>
+    </a>
+
+    <div class="bargin_list">
+        <ul>
+        </ul>
+    </div>
+</section>
+<section id="more" class="clearfix">
+    <a href="moneyctrl.html">更多优惠信息 »</a>
+</section>
+<!--底部-->
+<footer id="footer clearfix">
+    <a href="brandTitle.html" class="foot_brand">
+        <span>品牌排行</span>
+        <img src="images/more.png" alt="" class="fr"/>
+    </a>
+    <div class="foot_bottom">
+        <div class="top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:void(0)" class="back">
+                返回顶部
+                 <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+            </a>
+        </div>
+        <div class="end">
+            <p>
+               <a href="http://m.manmanbuy.com/?o=download">手机APP下载</a>
+               <a href="#">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</footer>
+<!--app推广下载-->
+<div class="app_download">
+    <a href="http://m.manmanbuy.com/?o=download">
+        <img src="images/APPDownload.png" alt=""/>
+    </a>
+</div>
+
+</body>
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/template/template.js"></script>
+<script src="js/index.js"></script>
+<!--简易方法生成的菜单模板-->
+<!--<script type="text/template" id="tmp">-->
+<!--<% for(var i=0;i<result.length;i++){ %>-->
+<!--<div class="col-xs-3">-->
+<!--<a href="<%= result[i].titlehref %>">-->
+<!--<%=result[i].img%>-->
+<!--<p><%= result[i].name %></p>-->
+<!--</a>-->
+<!--</div>-->
+<!--<% } %>-->
+<!--</script>-->
+<!--菜单模板-->
+<script type="text/html" id="tmp">
+    {{each result as value i}}
+    <div class="meun_item">
+        <a href="{{value.titlehref}}">
+            {{#value.img}}
+            <p>{{value.name}}</p>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<!--折扣详情模板-->
+<script type="text/html" id="model">
+    {{each result as value i}}
+    <li>
+        <a href="./yy_zhekoushangpin.html?productid={{value.productId}}" class="clearfix">
+            <div class="pic fl">
+                {{#value.productImgSm}}
+            </div>
+            <div class="info">
+                <h3>{{value.productName}}</h3>
+                <span class="tmall">{{value.productFrom}}|{{value.productTime}}</span>
+                <i class="comment iconfont icon-duihua fr">{{getNum(value.productComCount)}}</i>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+</html>

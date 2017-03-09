@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>省钱控</title>
+    <!--引用bootstrap样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet" href="./css/base.css"/>
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet" href="css/yy-savemoney.css"/>
+    <!--引用less.js-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!--头部区域-->
+<a name="jumptop"></a>
+<header class="head" id="top">
+    <!-- 返回首页-->
+    <div class="h-back">
+        <a href="./index.html" class="glyphicon glyphicon-menu-left"></a>
+    </div>
+    <h3>省钱控-最新优惠</h3>
+    <!-- 下载app -->
+    <div class="appDown">
+        <a href="http://m.manmanbuy.com/?o=download"></i></a>
+    </div>
+    <!-- 静态定位的图标-->
+    <a href="http://m.manmanbuy.com/?o=download"><img src="./images/APPDownload.png" class="fixDownLoad" alt=""/></a>
+</header>
+
+
+
+<!--列表区域-->
+    <div id="container">
+        <div class="y-list" id="listdiv">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+
+<!--翻页区域-->
+<div id="changed">
+    <a href="javascript:void(0)" class="previous fl ">
+        上一页
+    </a>
+    <!-- 选择框-->
+    <select name="" id="yyChoose">
+
+    </select>
+    <a href="javascript:void(0)" class="next fr ">
+        下一页
+    </a>
+</div>
+
+<!--点击跳转-->
+<div id="jump">
+    <!-- 点击返回首页-->
+    <a href="./index.html" class="first">首页</a>
+    <span>&gt;</span>
+    <!-- 点击跳转-->
+    <a href="javascript:;" class="up">省钱控</a>
+</div>
+
+<!--底部-->
+<footer>
+    <row class="clearfix yy-f">
+        <a class="col-xs-4 deng" href="http://192.168.21.72/wxy1/login.html">登录</a>
+        <a class="col-xs-4 zhu" href="http://192.168.21.72/wxy1/register.html">注册</a>
+        <a class="col-xs-4 gotop" href="javascript:;"><i></i>回到顶部</a>
+    </row>
+    <a href="http://m.manmanbuy.com/?o=download">
+        <div class="ban"></div>
+    </a>
+</footer>
+
+</body>
+
+<!--省钱控列表的模板-->
+<script type="text/template" id="savaMoneyTpl">
+    <% for(var i=0; i<result.length ; i++){ %>
+        <a href="yy_zhekoushangpin.html?productId=<%= result[i].productId %>" class="clearfix">
+            <li>
+                <div class="pic">
+                    <%=# result[i].productImgSm %>
+                </div>
+                <div class="yytitle">
+                    <%= result[i].productName %>
+                    <span>
+                        <%= result[i].productPinkage %>
+                    </span>
+                </div>
+                <div class="yyother">
+                    <span class="buy">
+                        <%= result[i].productFrom+' | '+result[i].productTime %>
+                    </span>
+                    <span class="message">
+                        <i class="iconfont">&#xe6f2;</i>
+                        <%= getNum(result[i].productComCount) %>
+                    </span>
+                </div>
+            </li>
+        </a>
+    <% } %>
+
+</script>
+
+
+
+<!--引包-->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/template/template-native.js"></script>
+<!--js代码-->
+<script src="js/yy_savemoney.js"></script>
+</html>

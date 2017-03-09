@@ -1,0 +1,239 @@
+#header {
+  width: 100%;
+  height: 50px;
+  background: #ff841d;
+}
+#header > .logo {
+  padding: 12px;
+  height: 100%;
+  display: inline-block;
+}
+#header > .logo img {
+  height: 25px;
+}
+#header > .app {
+  padding: 7px;
+  display: inline-block;
+}
+#header > .app img {
+  width: 34px;
+}
+#search_box {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  background: #fff;
+}
+#search_box form {
+  padding-right: 70px;
+  position: relative;
+}
+#search_box form > input[type='search'] {
+  width: 100%;
+  height: 30px;
+  background: #f1f1f1;
+  text-indent: 10px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 5%;
+  font-size: 16px;
+}
+#search_box form > input[type='submit'] {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ff841d;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+#menu {
+  background: #fff;
+}
+#menu > .container > .row {
+  padding: 10px 0;
+}
+#menu > .container > .row a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+#menu > .container > .row a > img {
+  width: 50px;
+  height: 50px;
+}
+#menu > .container > .row a > p {
+  font-size: 13px;
+  color: #5a5a5a;
+  margin: 5px 0;
+}
+#menu > .container > .row div:nth-child(9),
+#menu > .container > .row div:nth-child(10),
+#menu > .container > .row div:nth-child(11),
+#menu > .container > .row div:nth-child(12) {
+  display: none;
+}
+#menu > .container > .row div.close {
+  display: none;
+}
+#menu > .container > .row div.toggle {
+  display: block;
+}
+#bargin {
+  width: 100%;
+  line-height: 35px;
+}
+#bargin .bargin_title {
+  padding: 0 10px;
+  display: block;
+  position: relative;
+  background: #ff9000;
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+}
+#bargin .bargin_title span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+#bargin .bargin_title img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+#bargin .bargin_list ul li {
+  max-width: 960px;
+  margin: 0 auto;
+  background: white;
+  padding: 15px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+#bargin .bargin_list ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#bargin .bargin_list ul li a .pic img {
+  width: 100px;
+  height: 100px;
+}
+#bargin .bargin_list ul li a .info {
+  width: 100%;
+  height: 100px;
+  padding-left: 120px;
+}
+#bargin .bargin_list ul li a .info h3 {
+  font-size: 15px;
+  height: 60px;
+  color: #333;
+  text-align: left;
+}
+#bargin .bargin_list ul li a .info span,
+#bargin .bargin_list ul li a .info i {
+  height: 30px;
+  font-size: 12px;
+  color: #a1a1a1;
+}
+#more {
+  width: 100%;
+  background: #F4F4F4;
+  padding: 10px;
+}
+#more > a {
+  display: block;
+  width: 100%;
+  line-height: 2;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+footer {
+  width: 100%;
+  line-height: 35px;
+}
+footer .foot_brand {
+  padding: 0 10px;
+  display: block;
+  position: relative;
+  background: #ff9000;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+footer .foot_brand span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+footer .foot_brand img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+footer .foot_bottom {
+  width: 100%;
+  margin-top: 10px;
+}
+footer .foot_bottom .top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+footer .foot_bottom .top a {
+  display: block;
+  flex: 1;
+  line-height: 2.5;
+  text-align: center;
+  font-size: 14px;
+}
+footer .foot_bottom .top a:nth-child(2) {
+  border-left: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+}
+footer .foot_bottom .top a:nth-child(3) {
+  position: relative;
+}
+footer .foot_bottom .top a:nth-child(3) img {
+  position: absolute;
+  left: 50%;
+  margin-left: -45px;
+  top: 9px;
+}
+footer .foot_bottom .end {
+  width: 100%;
+  padding: 20px 10px;
+  line-height: 1;
+}
+footer .foot_bottom .end p {
+  text-align: center;
+  font-size: 12px;
+}
+footer .foot_bottom .end p a:nth-child(1) {
+  color: red;
+}
+.app_download {
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+}
+.app_download a {
+  display: block;
+}
+.app_download a img {
+  width: 60px;
+  height: 67px;
+}
+/*# sourceMappingURL=index.css */

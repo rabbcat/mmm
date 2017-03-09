@@ -1,0 +1,218 @@
+/*最外层整体布局样式 B*/
+.layout {
+  min-width: 320px;
+  background-color: #fff;
+}
+.layout > .icon-fix {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 60px;
+  height: 67px;
+}
+.layout > .icon-fix > img {
+  width: 100%;
+  height: 100%;
+}
+/*最外层整体布局样式 E*/
+/*固定qpp定位部分 B*/
+/*固定qpp定位部分 E*/
+/*头部 B*/
+.head {
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+  position: relative;
+}
+.head > .h-back {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+}
+.head > .h-back > a {
+  position: absolute;
+  top: 0;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+.head > h3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font: normal 900 20px/50px "microsoft yahei";
+}
+.head > .appDown {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+.head > .appDown > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/header_app.png) no-repeat center;
+  background-size: 34px;
+}
+/*头部 E*/
+/*主体部分 B*/
+.main {
+  min-height: 600px;
+  padding: 0 15px;
+}
+.main > .introduce {
+  min-height: 500px;
+}
+.main > .introduce > h3 {
+  overflow: hidden;
+  margin: 10px 0;
+  font: 900 18px "microsoft yahei";
+  color: #666;
+}
+.main > .introduce > .price {
+  color: #ff841d;
+  font: 700 14px "microsoft yahei";
+}
+.main > .introduce > .info {
+  margin: 20px 0;
+  color: #999;
+  font: 12px "microsoft yahei";
+}
+.main > .introduce > .detailed > .smallImg {
+  /*给图片设置一个overflowhidden是将图片变成一个隔离的块 文字就会环绕图片摆放*/
+}
+.main > .introduce > .detailed > .smallImg > p {
+  color: #666;
+  font: 18px "microsoft yahei";
+}
+.main > .introduce > .detailed > .smallImg > img {
+  width: 120px;
+  height: 120px;
+  float: right;
+  overflow: hidden;
+}
+.main > .introduce > .detailed > .bigImg {
+  width: 100%;
+}
+.main > .introduce > .detailed > .bigImg > img {
+  max-width: 100%;
+}
+.main > .fixed-content {
+  margin: 20px 0px;
+}
+.main > .fixed-content > .buy {
+  display: block;
+  text-align: center;
+  height: 40px;
+  background-color: #FF9000;
+  color: #fff;
+  margin: 30px 10px;
+  font: 14px/40px "microsoft yahei";
+  border-radius: 5px;
+}
+.main > .fixed-content > div {
+  width: 100%;
+}
+.main > .fixed-content > div > img {
+  width: 100%;
+}
+.main > .criticism {
+  padding: 10px 0;
+}
+.main > .criticism > .tit {
+  margin: 10px 0px;
+  font: 16px "microsoft yahei";
+}
+.main > .criticism > .reply > .form {
+  width: 100%;
+  border: 2px solid #ECEAE8;
+}
+.main > .criticism > .reply > .form > textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+  outline: none;
+  border: none;
+}
+.main > .criticism > .reply > .form > .ctrl {
+  border-top: 1px solid #f2f2f2;
+}
+.main > .criticism > .reply > .form > .ctrl:after {
+  content: '';
+  display: block;
+  height: 0;
+  line-height: 0;
+  clear: both;
+  overflow: hidden;
+}
+.main > .criticism > .reply > .form > .ctrl > .tjdp {
+  width: 100px;
+  height: 36px;
+  border: none;
+  float: right;
+  background-color: #ff841d;
+  border-radius: 2px;
+  color: #fff;
+}
+/*主体部分 E*/
+/*底部部分 B*/
+.foot {
+  width: 100%;
+  /* 底部三个按钮的部分*/
+}
+.foot > .button {
+  width: 100%;
+}
+.foot > .button > a {
+  float: left;
+  height: 30px;
+  text-align: center;
+  font: normal 14px/30px "microsoft yahei";
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  color: #666;
+  /*获取到第一个a标签*/
+  /*获取到第二个a标签*/
+  /*获取到第三个a标签*/
+}
+.foot > .button > a:nth-child(1) {
+  width: 30%;
+}
+.foot > .button > a:nth-child(2) {
+  width: 30%;
+}
+.foot > .button > a:nth-child(3) {
+  width: 40%;
+}
+.foot > .f-info {
+  text-align: center;
+}
+.foot > .f-info > p {
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.foot > .f-info > p > a {
+  color: red;
+  font-weight: 400;
+}
+.foot > .f-info > p > span {
+  color: #666;
+  font-weight: 400;
+}
+.foot > .f-info > a {
+  font-size: 12px;
+  color: #666;
+}
+/*底部部分 E*/
+/*# sourceMappingURL=ach_zhekoushangpin.css */

@@ -1,0 +1,101 @@
+/* header B */
+header {
+  width: 100%;
+  height: 44px;
+  background-color: #f4483e;
+  position: relative;
+  box-shadow: 0 2px 3px #DDD;
+}
+header h1 {
+  width: 100%;
+  padding: 0 50px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 18px;
+  color: #FFF;
+}
+header a {
+  height: 44px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+}
+header .goindex {
+  background: url(../images/icon-left.svg) center center no-repeat;
+  background-size: 24px 24px;
+  left: 0;
+}
+header .app {
+  background: url(../images/header_app.png) center center no-repeat;
+  background-size: 34px 34px;
+  right: 0;
+}
+/* header E */
+/* main B */
+main {
+  padding: 10px 0;
+  background-color: #fff;
+}
+main .nav {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding-left: 10px;
+  margin: 20px 0;
+  background-color: #ebebeb;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+main .nav a {
+  margin: 0 5px;
+}
+main .APPdown {
+  height: 67px;
+  width: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 10%;
+}
+main .APPdown img {
+  width: 100%;
+  height: 100%;
+}
+/* main E */
+/* footer B */
+footer .table {
+  width: 100%;
+  height: 34px;
+}
+footer .table li {
+  width: 30%;
+  float: left;
+  text-align: center;
+  border: 1px solid #c4c4c4;
+  border-right: none;
+}
+footer .table li a {
+  line-height: 34px;
+  width: 100%;
+  height: 100%;
+}
+footer .table li img {
+  height: 18px;
+  margin: -2px 5px 0;
+}
+footer .table li:last-child {
+  width: 40%;
+}
+footer .links {
+  font-size: 12px;
+  padding: 15px 0;
+  text-align: center;
+  color: #666;
+}
+footer .links a {
+  padding: 0 5px;
+}
+footer .links a:first-child {
+  color: red;
+}
+/* footer E */
+/*# sourceMappingURL=coupon-common.css */

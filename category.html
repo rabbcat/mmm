@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <!--引入第三方样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入样式重置文件 -->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <!-- 引入自己的样式文件 -->
+    <link rel="stylesheet/less" type="text/css" href="css/bijiasousuo.less">
+</head>
+
+<body>
+    <div class="layout">
+        <!--头部-->
+        <header id="header" class="">
+            <a href="index.html" class="logo">
+                <img src="images/header_logo.png" alt="">
+            </a>
+            <a href="javascript:;" class="app">
+                <img src="images/header_app.png" alt="" />
+            </a>
+        </header>
+        <!--搜索-->
+        <form action="" class="search">
+                <div class="search_txt">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                </div>
+                <div class="search_btn">
+                    <input type="button" value="搜索">
+                </div>
+        </form>
+        <!-- 列表 -->
+        <section class="fenglei">
+        </section>
+        <!-- 底部 -->
+        <section class="footer">
+            <div class="footer_top">
+                <a href="#" class="login">登录</a>
+                <a href="#" class="register">注册</a>
+                <a href="#" class="back_top">
+                    <img src="images/fzy_top.jpg" alt="">返回顶部</a>
+            </div>
+            <div class="footer_bottom">
+                <p>
+                    <a href="#">手机app下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    --掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com 
+                </p>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 引入less js文件 -->
+    <script type="text/javascript" src="lib/less/less.min.js"></script>
+    <!-- 引入jq文件 -->
+    <script type="text/javascript" src="lib/jquery/jquery-1.12.2.min.js"></script>
+    <!-- 引入bootstarp文件 -->
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script type="text/javascript" src="lib/template/template.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script type="text/javascript" src="js/fzy_fuc.js"></script>
+    <script type="text/javascript" src="js/bijiasousuo.js"></script>
+    <!-- 标题列表模板 -->
+    <script type="text/html" id="tit_tpl">
+        <div class="content">
+            {{each result as value i }}
+                <div class="fl_tit">
+                    <a href="javascript:;" class="fl_tit_link" titleId="{{value.titleId}}">{{value.title}}</a>
+                </div>
+            {{/each}}
+        </div>
+    </script>
+    <script type="text/html" id="tit_con_tpl">
+        <ul class="fl_list clearfix">
+            {{each result as value i}}
+            <li><a href="productlist.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a></li>
+            {{/each}}
+        </ul>
+    </script>
+</body>
+</html>
